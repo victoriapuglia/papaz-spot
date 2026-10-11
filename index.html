@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@BarPapaz">
 
-<link rel="preload" as="image" href="img/luwombo-parcels-1200.webp" imagesrcset="img/luwombo-parcels-720.webp 720w, img/luwombo-parcels-1200.webp 1200w, img/luwombo-parcels-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/luwombo-parcels-1200.webp" imagesrcset="img/luwombo-parcels-720.webp 720w, img/luwombo-parcels-1200.webp 1200w, img/luwombo-parcels-2000.webp 2000w" imagesizes="(min-width: 960px) 54vw, 80vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Big+Shoulders+Display:wght@700..900&family=Figtree:wght@400;500;600&family=Mr+Dafoe&display=swap">
@@ -83,19 +83,26 @@
 
 <!-- HERO -->
 <section class="hero" id="top" aria-labelledby="hero-title">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="par" data-depth="0.14">
-      <img class="kenburns" src="img/luwombo-parcels-1200.webp"
-           srcset="img/luwombo-parcels-720.webp 720w, img/luwombo-parcels-1200.webp 1200w, img/luwombo-parcels-2000.webp 2000w"
-           sizes="100vw" width="2000" height="1275" alt="" fetchpriority="high" decoding="async">
+  <div class="hero-art" aria-hidden="true">
+    <div class="slab slab--hero par" data-depth="0.04">
+      <span class="halftone halftone--ink ht-a"></span>
+      <span class="halftone halftone--ink ht-b"></span>
     </div>
+    <span class="cut cut--a par" data-depth="0.12"></span>
+    <span class="cut cut--b par" data-depth="0.12"></span>
+    <span class="halftone halftone--red ht-edge"></span>
   </div>
 
-  <div class="hero-plate par" data-depth="-0.07">
-    <span class="torn torn--plate" aria-hidden="true"></span>
-    <span class="signature" aria-hidden="true">Papaz</span>
-    <img src="img/matooke-plate-600.webp" srcset="img/matooke-plate-600.webp 600w, img/matooke-plate-1000.webp 1000w" sizes="(min-width: 900px) 24vw, 42vw" width="600" height="600" alt="A plate of mashed matooke with chicken and sauce" decoding="async">
-  </div>
+  <figure class="hero-photo">
+    <div class="par" data-depth="-0.05">
+      <div class="pill pill--left">
+        <img class="kenburns" src="img/luwombo-parcels-1200.webp"
+             srcset="img/luwombo-parcels-720.webp 720w, img/luwombo-parcels-1200.webp 1200w, img/luwombo-parcels-2000.webp 2000w"
+             sizes="(min-width: 960px) 54vw, 80vw" width="2000" height="1275"
+             alt="Luwombo: stews tied up in smoked banana-leaf parcels, ready to steam" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </figure>
 
   <div class="hero-copy">
     <p class="kicker"><span class="tag">Bar &amp; Restaurant</span> Lukuli Road · Makindye · Kampala</p>
@@ -116,7 +123,7 @@
   </div>
 
   <a class="vertical-link" href="#food">The Menu</a>
-  <p class="hero-foot"><span>Luwombo parcels &amp; matooke · illustrative photography</span></p>
+  <p class="hero-foot"><span>Luwombo parcels · illustrative photography</span></p>
 </section>
 
 <!-- FOOD -->
@@ -127,8 +134,12 @@
   </header>
 
   <article class="dish dish--feature">
-    <div class="dish-img par-wrap">
-      <img src="img/matooke-wide-1000.webp" srcset="img/matooke-wide-1000.webp 1000w, img/matooke-wide-1800.webp 1800w" sizes="(min-width: 900px) 64vw, 100vw" width="1800" height="1225" loading="lazy" decoding="async" alt="Golden mashed matooke on a white plate with chicken, sauce and mushrooms">
+    <div class="frame frame--matooke">
+      <span class="slab" aria-hidden="true"><span class="halftone halftone--ink"></span></span>
+      <span class="cut cut--c par" data-depth="0.06" aria-hidden="true"></span>
+      <div class="pill pill--right">
+        <img src="img/matooke-wide-1000.webp" srcset="img/matooke-wide-1000.webp 1000w, img/matooke-wide-1800.webp 1800w" sizes="(min-width: 960px) 60vw, 92vw" width="1800" height="1225" loading="lazy" decoding="async" alt="Golden mashed matooke on a white plate with chicken, sauce and mushrooms">
+      </div>
     </div>
     <div class="dish-text">
       <span class="num" aria-hidden="true">01</span>
@@ -143,13 +154,12 @@
       <h3>Luwombo</h3>
       <p>Stew wrapped in smoked banana leaf and steamed slowly, so the sauce takes on the leaf&rsquo;s gentle smokiness. Chicken luwombo in groundnut sauce is a Buganda classic.</p>
     </div>
-    <div class="collage">
-      <figure class="snap snap--a">
-        <span class="torn" aria-hidden="true"></span>
-        <img src="img/luwombo-open-900.webp" srcset="img/luwombo-open-900.webp 900w, img/luwombo-open-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 80vw" width="1600" height="1060" loading="lazy" decoding="async" alt="A banana-leaf parcel opened to show chicken luwombo in red sauce">
-      </figure>
-      <figure class="snap snap--b par" data-depth="-0.05">
-        <img src="img/groundnut-900.webp" width="900" height="754" loading="lazy" decoding="async" alt="Groundnut sauce in carved wooden bowls">
+    <div class="frame frame--luwombo">
+      <span class="slab" aria-hidden="true"><span class="halftone halftone--ink"></span></span>
+      <span class="cut cut--d" aria-hidden="true"></span>
+      <img class="frame-main" src="img/luwombo-open-900.webp" srcset="img/luwombo-open-900.webp 900w, img/luwombo-open-1600.webp 1600w" sizes="(min-width: 960px) 44vw, 86vw" width="1600" height="1060" loading="lazy" decoding="async" alt="A banana-leaf parcel opened to show chicken luwombo in red sauce">
+      <figure class="inset par" data-depth="-0.05">
+        <div class="pill pill--left"><img src="img/groundnut-900.webp" width="900" height="754" loading="lazy" decoding="async" alt="Groundnut sauce in carved wooden bowls"></div>
         <figcaption>Ebinyebwa · groundnut sauce</figcaption>
       </figure>
     </div>
@@ -157,10 +167,11 @@
 
   <div class="dish-pair">
     <article class="dish dish--fish">
-      <figure class="snap snap--c">
-        <span class="torn torn--alt" aria-hidden="true"></span>
-        <img src="img/whole-fish-900.webp" srcset="img/whole-fish-900.webp 900w, img/whole-fish-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="1446" loading="lazy" decoding="async" alt="Whole fried fish on a metal platter with matooke and tomato-onion salad">
-      </figure>
+      <div class="frame frame--fish">
+        <span class="slab" aria-hidden="true"><span class="halftone halftone--ink"></span></span>
+        <div class="pill pill--left"><img src="img/whole-fish-900.webp" srcset="img/whole-fish-900.webp 900w, img/whole-fish-1600.webp 1600w" sizes="(min-width: 960px) 46vw, 90vw" width="1600" height="1446" loading="lazy" decoding="async" alt="Whole fried fish on a metal platter with matooke and tomato-onion salad"></div>
+        <span class="cut cut--e" aria-hidden="true"></span>
+      </div>
       <div class="dish-text">
         <span class="num" aria-hidden="true">03</span>
         <h3>Fish</h3>
@@ -168,9 +179,11 @@
       </div>
     </article>
     <article class="dish dish--goat">
-      <figure class="snap snap--d">
-        <img src="img/goat-900.webp" srcset="img/goat-900.webp 900w, img/goat-1600.webp 1600w" sizes="(min-width: 900px) 34vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Close-up of browned, pan-fried goat meat">
-      </figure>
+      <div class="frame frame--goat">
+        <span class="halftone halftone--red" aria-hidden="true"></span>
+        <span class="cut cut--f" aria-hidden="true"></span>
+        <img class="frame-main" src="img/goat-900.webp" srcset="img/goat-900.webp 900w, img/goat-1600.webp 1600w" sizes="(min-width: 960px) 34vw, 80vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Close-up of browned, pan-fried goat meat">
+      </div>
       <div class="dish-text">
         <span class="num" aria-hidden="true">04</span>
         <h3>Goat</h3>
@@ -204,6 +217,8 @@
 
 <!-- MUSIC -->
 <section class="music" id="music" aria-labelledby="music-title">
+  <span class="cut cut--m1 par" data-depth="0.08" aria-hidden="true"></span>
+  <span class="cut cut--m2 par" data-depth="0.08" aria-hidden="true"></span>
   <div class="music-inner">
     <p class="tag tag--ink">Music</p>
     <h2 id="music-title"><span class="m-line">Live band.</span> <span class="m-line">Every Monday.</span></h2>
