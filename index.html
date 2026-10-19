@@ -24,12 +24,13 @@
 <meta name="twitter:site" content="@BarPapaz">
 
 <link rel="preload" as="image" href="img/hero-luwombo-1100.webp" imagesrcset="img/hero-luwombo-720.webp 720w, img/hero-luwombo-1100.webp 1100w, img/hero-luwombo-1536.webp 1536w" imagesizes="(min-width: 961px) 46vw, 92vw" fetchpriority="high">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion-ok')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&amp;family=Figtree:wght@400;600&amp;display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&amp;family=Figtree:wght@400;600&amp;display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&amp;family=Figtree:wght@400;600&amp;display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 
 <script type="application/ld+json">
 {
@@ -112,7 +113,7 @@
   <figure class="menu-photo">
     <img src="img/meal-overhead-900.webp" srcset="img/meal-overhead-900.webp 900w, img/meal-overhead-1536.webp 1536w" sizes="(min-width: 961px) 50vw, 92vw" width="1536" height="1024" loading="lazy" decoding="async" alt="Overhead view of a plate with mashed matooke, a tomato stew, cooked greens and sliced avocado on a wooden table">
   </figure>
-  <div class="board">
+  <div class="board" data-reveal>
     <h2 id="menu-title">The menu</h2>
     <p class="board-note">Ask for today&rsquo;s menu and prices.</p>
     <!-- Owner's menu: add prices as <span class="price">Shs 20,000</span> after each dish name, and add or remove <li> rows freely. -->
@@ -165,7 +166,7 @@
 <section class="music" id="music" aria-labelledby="music-title">
   <div class="music-inner">
     <h2 id="music-title">Live band every Monday</h2>
-    <figure class="music-photo">
+    <figure class="music-photo" data-reveal>
       <img src="img/gig-guitar-900.webp" srcset="img/gig-guitar-560.webp 560w, img/gig-guitar-900.webp 900w" sizes="(min-width: 961px) 38vw, 88vw" width="900" height="600" loading="lazy" decoding="async" alt="Hands playing an electric guitar beside a microphone under warm stage light">
     </figure>
     <div class="music-text">
@@ -178,7 +179,7 @@
 <section class="reviews" aria-labelledby="reviews-title">
   <h2 id="reviews-title">What people say</h2>
   <div class="reviews-grid">
-    <article class="clipping">
+    <article class="clipping" data-reveal>
       <p class="clip-section">Dining</p>
       <h3 class="clip-title">Papaz Spot &amp; Restaurant</h3>
       <p class="clip-byline">By A. Kadumukasa Kironde II, 4 May 2024</p>
@@ -249,6 +250,6 @@
   <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Papaz%20Spot%20Bar%20and%20Restaurant&amp;destination_place_id=ChIJI9BK8ZC9fRcRY3crD369vRM" target="_blank" rel="noopener">Directions</a>
 </nav>
 
-<script src="motion.js?v=8" defer></script>
+<script src="motion.js?v=9" defer></script>
 </body>
 </html>

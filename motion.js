@@ -19,6 +19,22 @@
   });
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // One-time reveals: menu leaders draw in, the clipping drops, the gig photo tilts into place.
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  Array.prototype.forEach.call(document.querySelectorAll('.board .menu-list li'), function (li, i) {
+    li.style.setProperty('--i', i);
+  });
+  if ('IntersectionObserver' in window) {
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); revealIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.25 });
+    reveals.forEach(function (el) { revealIO.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in-view'); });
+  }
   var layers = Array.prototype.slice.call(document.querySelectorAll('[data-depth]'));
   if (!layers.length) return;
 
@@ -37,7 +53,9 @@
       var host = el.parentElement.getBoundingClientRect();
       var offset = (host.top + host.height / 2) - vh / 2;
       var y = -offset * parseFloat(el.dataset.depth);
-      el.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0)';
+      // the guitar also leans slightly as the page moves, like it's propped against the slab
+      var lean = el.classList.contains('hero-guitar') ? ' rotate(' + Math.max(-4, Math.min(4, offset * 0.008)).toFixed(2) + 'deg)' : '';
+      el.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0)' + lean;
     });
   }
   function request() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
