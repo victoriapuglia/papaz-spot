@@ -6,6 +6,18 @@
   onHeader();
   window.addEventListener('scroll', onHeader, { passive: true });
 
+  // Google Maps loads only when asked for: keeps third-party weight and cookies off the first visit.
+  var map = document.querySelector('.visit-map');
+  var mapBtn = map && map.querySelector('.map-load');
+  if (mapBtn) mapBtn.addEventListener('click', function () {
+    var frame = document.createElement('iframe');
+    frame.src = map.dataset.src;
+    frame.title = 'Map showing Papaz Spot on Lukuli Road, Makindye';
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    map.replaceChildren(frame);
+    frame.focus();
+  });
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var layers = Array.prototype.slice.call(document.querySelectorAll('[data-depth]'));
   if (!layers.length) return;
